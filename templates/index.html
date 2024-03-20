@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for obj in object_list %}
+    {% url "detail" id=obj.id %}
+    <a href="{{ obj.get_absolute_url }}">{{ obj.title }}</a><br/>
+    {{ obj.content }}<br/>
+    {{ obj.updated }}<br/>
+    {{ obj.timestamp }}<br/>
+
+    {% endfor %} 
+    
+</body>
+</html>
